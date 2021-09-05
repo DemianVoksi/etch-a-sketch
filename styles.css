@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Lobster";
+  src: url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFFFFF;
+  min-height: 100%;
+  padding: 0px;
+  margin: 0;
+  /* border: 1px solid black;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #222; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  border: 1px solid black;
+  padding: 20px;
+  align-self: center;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+}
+
+.mainContent {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid purple;
+  align-items: stretch;
+}
+
+.tools {
+  padding: 130px;
+  border: 1px solid red;
+}
+
+.sketchContainer {
+  padding: 130px;
+  border: 1px solid blue;
+}
