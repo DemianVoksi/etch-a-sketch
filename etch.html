@@ -5,12 +5,20 @@
     <title>Etch a sketch</title>
     <script src="app.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="body" id="body">
-    <header class="header" id="header">Etch-a-sketch</header>
+    <header class="header" id="header">
+      <title class="title" id="title">Etch-a-sketch</title>
+    </header>
     <mainContent class="mainContent" id="mainContent">
-      <tools class="tools" id="tools"></tools>
+      <tools class="tools" id="tools">
+        <button class="button" id="button1">Black</button>
+        <button class="button" id="button2">Rainbow</button>
+        <button class="button" id="button3">Eraser</button>
+        <button class="button" id="button4">Clear</button>
+      </tools>
       <sketchContainer class="sketchContainer" id="sketchContainer"></sketchContainer>
     </mainContent>
   </body>

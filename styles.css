@@ -3,6 +3,11 @@
   src: url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+}
+
 html {
   height: 100%;
 }
@@ -22,27 +27,68 @@ body {
 }
 
 header {
-  border: 1px solid black;
-  padding: 20px;
+  /* border: 1px solid black; */
+  height: 100px;
+  width: 100%;
+  color: #00CCCC;
+  /* padding-top: 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-self: center; */
+  align-items: flex-end;
+}
+
+.title {
+  height: 50%;
+  display: flex;
   align-self: center;
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'Lobster', cursive;
 }
 
 .mainContent {
+  /* border: 1px solid purple; */
   height: 100%;
   display: flex;
   flex-direction: row;
-  border: 1px solid purple;
-  align-items: stretch;
+  /* justify-content: flex-start; */
+  /* align-items: stretch; */
 }
 
 .tools {
-  padding: 130px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  width: 260px;
+  height: 500px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.button {
+  height: 40px;
+  border: 2px solid #00CCCC;
+  border-radius: 20px;
+  color: #00CCCC;
+  background-color: #FFFFFF;
+  margin: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.button:focus,
+.button:hover {
+  color: #FFFFFF;
+  background-color: #00CCCC;
+  box-shadow: 0 1px 2px 0 #888888;
 }
 
 .sketchContainer {
-  padding: 130px;
-  border: 1px solid blue;
+  border: 2px solid #00CCCC;
+  margin-left: 160px;
+  width: 500px;
+  height: 500px;;
+  align-self: center;
 }
