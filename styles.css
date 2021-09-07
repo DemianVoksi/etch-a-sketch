@@ -1,3 +1,9 @@
+:root {
+  --main-bg-color: #fffff0;
+  --main-color: #00CCCC;
+}
+
+
 @font-face {
   font-family: "Lobster";
   src: url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
@@ -13,7 +19,7 @@ html {
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: var(--main-bg-color);
   min-height: 100%;
   padding: 0px;
   margin: 0;
@@ -30,7 +36,7 @@ header {
   /* border: 1px solid black; */
   height: 100px;
   width: 100%;
-  color: #00CCCC;
+  color: var(--main-color);
   /* padding-top: 30px; */
   display: flex;
   flex-direction: column;
@@ -68,10 +74,10 @@ header {
 
 .button {
   height: 40px;
-  border: 2px solid #00CCCC;
+  border: 2px solid var(--main-color);
   border-radius: 20px;
-  color: #00CCCC;
-  background-color: #FFFFFF;
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
   margin: 20px;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
@@ -80,13 +86,13 @@ header {
 
 .button:focus,
 .button:hover {
-  color: #FFFFFF;
-  background-color: #00CCCC;
+  color: var(--main-bg-color);
+  background-color: var(--main-color);
   box-shadow: 0 1px 2px 0 #888888;
 }
 
 .sketchContainer {
-  border: 2px solid #00CCCC;
+  border: 2px solid var(--main-color);
   margin-left: 160px;
   width: 500px;
   height: 500px;;

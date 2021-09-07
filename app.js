@@ -15,6 +15,7 @@ function getRGB() {
 
 // sketch container
 
+
 const sketchContainer = document.querySelector('#sketchContainer');
 
 const sketchDiv = document.createElement('div');
