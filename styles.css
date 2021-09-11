@@ -90,3 +90,24 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.slidecontainer {
+  width: 80%;
+  height: 40px;
+  margin-left: 10%; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: var(--main-color); 
+}
+
+input[type="range"]::-moz-range-track {  
+  background-color: #c75403;
+}
+
+input[type="range"]::-moz-range-thumb {  
+  background-color: var(--main-color);
+}
