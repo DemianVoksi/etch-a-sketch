@@ -86,5 +86,7 @@ header {
   width: 500px;
   height: 500px;
   align-self: center;
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

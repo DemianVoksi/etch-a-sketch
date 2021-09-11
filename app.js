@@ -1,20 +1,6 @@
 const sketchContainer = document.querySelector('#sketchContainer');
-const sketchDiv = document.createElement('div');
 
-function createContainerItems(items) {
-  // items = promptNum(num)
 
-  for(let i=0; i < items * items; i++) {
-    
-    sketchDiv.classList.add('sketchDiv');
-    sketchDiv.style.height = divDimensions(promptNum(25));
-    sketchDiv.style.width = divDimensions(promptNum(25));
-    sketchDiv.style.overflow = 'none'
-    sketchContainer.appendChild(sketchDiv);
-  }
-}
-
-/* ***functions*** */
 
 function getRGB() {
   // returns a random RGB color code
@@ -43,68 +29,66 @@ function containerReload() {
   sketchContainer.innerHTML = ''
 }
 
-function domCreator(color) {
-  for (i of range(1, promptNum(25) * promptNum(25))) {
-    newDivGenerator(color)
-  }
-}
 
-function domCreatorColor() {
-  containerReload()
-  for (i of range(1, promptNum(25) * promptNum(25))) {
-    newDivColor()
-  }
-}
-
-function promptNum(num) {
-  let num1 = num;
-  return num1
-}
-
-function divDimensions(num) {
-  let percentage = Number(100 / num);
+function divDimensions(dimension) {
+  let percentage = Number(100 / dimension);
   return `${percentage}%`
 }
 
-function newDivGenerator(whichColor) {
-  /* const sketchDiv = document.createElement('div');
-  sketchDiv.classList.add('sketchDiv');
-  sketchDiv.style.height = divDimensions(promptNum(25));
-  sketchDiv.style.width = divDimensions(promptNum(25));
-  sketchDiv.style.overflow = 'none';
-  let sketchDiv = sketchContainer.querySelectorAll(".sketchDiv"); */
-  sketchDiv.addEventListener("mouseenter", function(event) {
-    event.target.style.backgroundColor = whichColor;
-  }, false);
-  sketchDiv.addEventListener("mouseleave", function(event) {
-    event.target.style.backgroundColor = whichColor;
-  }, false);
-  sketchContainer.appendChild(sketchDiv);
+function getSize(numberOfFields) {
+  let size = Number(numberOfFields * numberOfFields);
+  return size
 }
 
-function newDivColor() {
-  const sketchDiv = document.createElement('div');  
-  sketchDiv.classList.add('sketchDiv');
-  sketchDiv.style.height = divDimensions(promptNum(25));
-  sketchDiv.style.width = divDimensions(promptNum(25));
-  sketchDiv.style.overflow = 'none';
-  /* sketchDiv.style.border = '1px solid black'; */
-  sketchDiv.addEventListener("mouseenter", function(event) {
-    event.target.style.backgroundColor = getRGB();
-  }, false);
-  sketchDiv.addEventListener("mouseleave", function(event) {
-    event.target.style.backgroundColor = getRGB();
-  }, false);
-  sketchContainer.appendChild(sketchDiv);  
-}
+function getNumOfFields(num) {
+  let theNum = Number(num);
+  return theNum
+} 
 
-
-
-function clearDivs() {
-  constDivs = document.querySelectorAll(".sketchDiv");
-  for(i = 0; i < constDivs.length; i++) {
-    constDivs.style.backgroundColor = '#FFFFF0';
+function generateGrid(fields) {
+  // fields = getSize(number)
+  
+  for(let i=0; i < fields * fields; i++) {
+    sketchDiv = document.createElement('div');
+    sketchDiv.setAttribute('id', 'sketchDiv1');
+    sketchDiv.classList.add('sketchDiv');
+    sketchDiv.style.height = divDimensions(fields);
+    sketchDiv.style.width = divDimensions(fields);
+    sketchDiv.style.overflow = 'none'
+    sketchContainer.appendChild(sketchDiv);
   }
 }
 
-window.onload = () => createContainerItems(promptNum(25))
+function blackWhiteButton(whichColor) {
+  let sketchDiv = document.getElementsByClassName("sketchDiv");
+  for (let i = 0 ; i < sketchDiv.length; i++) {
+    sketchDiv[i].addEventListener("mouseenter", function(event) {
+      event.target.style.backgroundColor = whichColor;
+    }, false); 
+  }
+  sketchContainer.appendChild(sketchDiv);
+
+}
+
+function colorButton() {
+  let sketchDiv = document.getElementsByClassName("sketchDiv");
+  for (let i = 0 ; i < sketchDiv.length; i++) {
+    sketchDiv[i].addEventListener("mouseenter", function(event) {
+      event.target.style.backgroundColor = getRGB();
+    }, false); 
+  }
+  sketchContainer.appendChild(sketchDiv);
+
+}
+
+function clearButton() {
+  let sketchDiv = document.getElementsByClassName("sketchDiv");
+  for (let i = 0 ; i < sketchDiv.length; i++) {
+    sketchDiv[i].style.backgroundColor = "#FFFFF0"; 
+  }
+  sketchContainer.appendChild(sketchDiv);
+
+}
+
+
+window.onload = () => generateGrid(getNumOfFields(25))

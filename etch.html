@@ -14,12 +14,14 @@
     </header>
     <mainContent class="mainContent" id="mainContent">
       <tools class="tools" id="tools">
-        <button class="button" id="button1" onclick="domCreator('black')">Black</button>
-        <button class="button" id="button2" onclick="domCreatorColor()">Colors</button>
-        <button class="button" id="button3">Eraser</button>
-        <button class="button" id="button4">Clear</button>
+        <button class="button" id="button1" onclick="blackWhiteButton('black')">Black</button>
+        <button class="button" id="button2" onclick="colorButton()">Colors</button>
+        <button class="button" id="button3" onclick="blackWhiteButton('#FFFFF0')">Eraser</button>
+        <button class="button" id="button4" onclick="clearButton()">Clear</button>
       </tools>
-      <sketchContainer class="sketchContainer" id="sketchContainer"></sketchContainer>
+      <sketchContainer class="sketchContainer" id="sketchContainer">
+
+      </sketchContainer>
     </mainContent>
   </body>
 </html>
