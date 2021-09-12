@@ -100,14 +100,64 @@ header {
   justify-content: center;
 }
 
+
+/* Slider for Firefox */
+
 input[type="range"]::-moz-range-progress {
+  -webkit-appeareance: none;
   background-color: var(--main-color); 
 }
 
-input[type="range"]::-moz-range-track {  
+input[type="range"]::-moz-range-track {
   background-color: #c75403;
 }
 
 input[type="range"]::-moz-range-thumb {  
+  -webkit-appeareance: none;
   background-color: var(--main-color);
+}
+
+/* Slider for Chrome */
+
+input[type="range"] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: var(--main-color);
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--main-color);
+  margin-top: -5px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #c75403;
+}
+
+/* Positioning of .sketchContainer for Chrome and Firefox*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .sketchContainer {
+    margin-left: 220px; }
+}
+	
+@-moz-document url-prefix() {
+    .sketchContainer {
+      margin-left: 170px;
+    };
 }

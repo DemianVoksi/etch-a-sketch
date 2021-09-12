@@ -65,7 +65,7 @@ function clearButton() {
 
 function clear() {
   /*
-  Clears the sketchContainer.
+  Clears the sketchContainer HTML.
   Called on by makeNewGrid */
 
   sketchContainer.innerHTML = '';
